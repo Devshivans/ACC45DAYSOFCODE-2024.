@@ -1,0 +1,26 @@
+Link:-https://www.codechef.com/practice/course/logical-problems/DIFF800/problems/SUBSCRIBE_?tab=statement
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int T;
+	cin>>T;
+	while(T--){
+	    int N,X;
+	    cin>>N>>X;
+
+	if(N%6!=0){
+		float D=(N/6+1)*X;
+	    cout<<D<<endl;
+	}
+	else{
+		float D=(N/6)*X;
+	    cout<<D<<endl;
+	}
+	
+	
+	}
+
+}
