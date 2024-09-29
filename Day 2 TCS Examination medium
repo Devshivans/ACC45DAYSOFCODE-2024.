@@ -1,0 +1,44 @@
+Link:-https://www.codechef.com/practice/course/1-star-difficulty-problems/DIFF1200/problems/EXAMTIME?tab=statement
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int t;
+    cin >> t;
+    while(t--) {
+        int dragon_DSA, dragon_TOC, dragon_DM;
+        int sloth_DSA, sloth_TOC, sloth_DM;
+
+        // Input scores for Dragon and Sloth
+        cin >> dragon_DSA >> dragon_TOC >> dragon_DM;
+        cin >> sloth_DSA >> sloth_TOC >> sloth_DM;
+
+        int total_dragon = dragon_DSA + dragon_TOC + dragon_DM;
+        int total_sloth = sloth_DSA + sloth_TOC + sloth_DM;
+
+        // Compare total scores
+        if(total_dragon > total_sloth) {
+            cout << "Dragon" << endl;
+        } else if(total_sloth > total_dragon) {
+            cout << "Sloth" << endl;
+        } else {
+            // Compare individual subject scores if total is tied
+            if(dragon_DSA > sloth_DSA) {
+                cout << "Dragon" << endl;
+            } else if(dragon_DSA < sloth_DSA) {
+                cout << "Sloth" << endl;
+            } else if(dragon_TOC > sloth_TOC) {
+                cout << "Dragon" << endl;
+            } else if(dragon_TOC < sloth_TOC) {
+                cout << "Sloth" << endl;
+            } else if(dragon_DM > sloth_DM) {
+                cout << "Dragon" << endl;
+            } else if(dragon_DM < sloth_DM) {
+                cout << "Sloth" << endl;
+            } else {
+                cout << "TIE" << endl;  // All subject scores are tied
+            }
+        }
+    }
+}
